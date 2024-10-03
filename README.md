@@ -3,136 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lease Information Template</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
             padding: 20px;
         }
 
+        /* Styling for the heading */
+        .section-header {
+            background-color: #ccc;
+            font-weight: bold;
+            padding: 12px;
+            margin-bottom: 15px;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 18px;
+        }
+
+        /* Container for the single-column layout */
         .container {
             width: 100%;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .header, .footer {
-            background-color: #f4f4f4;
             padding: 10px;
+            border-bottom: 1px solid #ccc;
         }
 
-        td, th {
-            padding: 10px;
-            border: 1px solid #ddd;
+        /* Styling for labels and values */
+        .row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
         }
 
-        .section-title {
-            background-color: #e0e0e0;
-            padding: 10px;
+        .label {
             font-weight: bold;
+            width: 30%;
         }
 
-        .lease-info th, .lease-info td {
-            width: 50%;
-            vertical-align: top;
-        }
-
-        .lease-info td {
-            text-align: right;
-        }
-
-        .right-align {
+        .value {
+            width: 68%;
             text-align: right;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <table>
-            <!-- Lease Information -->
-            <tr class="section-title">
-                <th colspan="2">Lease Information</th>
-            </tr>
-            <tr>
-                <td>Status</td>
-                <td class="right-align">Current</td>
-            </tr>
-            <tr>
-                <td>ICS Code</td>
-                <td class="right-align">-</td>
-            </tr>
-            <tr>
-                <td>Lease Type</td>
-                <td class="right-align">Office Net</td>
-            </tr>
-            <tr>
-                <td>Contract Area</td>
-                <td class="right-align">4,490.00</td>
-            </tr>
-            <tr>
-                <td>Area</td>
-                <td class="right-align">4,490.00</td>
-            </tr>
-            <tr>
-                <td>Monthly Rent</td>
-                <td class="right-align">5,315.21</td>
-            </tr>
-            <tr>
-                <td>Annual Rent</td>
-                <td class="right-align">63,782.52</td>
-            </tr>
-            <tr>
-                <td>Rent Per Area</td>
-                <td class="right-align">1.18</td>
-            </tr>
-            <tr>
-                <td>Deposit</td>
-                <td class="right-align">0.00</td>
-            </tr>
-            <tr>
-                <td>Lease Term</td>
-                <td class="right-align">10/1/2018 To 2/29/2024</td>
-            </tr>
 
-            <!-- Customer Information -->
-            <tr class="section-title">
-                <th colspan="2">Customer Information</th>
-            </tr>
-            <tr>
-                <td>Name</td>
-                <td class="right-align">Barristers II, LLC</td>
-            </tr>
-            <tr>
-                <td>Property</td>
-                <td class="right-align">3312nd.C</td>
-            </tr>
-            <tr>
-                <td>Location</td>
-                <td class="right-align">331 2nd Ave S Novel Coworking LLC</td>
-            </tr>
-            <tr>
-                <td>Primary Contact</td>
-                <td class="right-align">Karen Parker</td>
-            </tr>
-            <tr>
-                <td>Office Phone</td>
-                <td class="right-align">(612) 341-2525 x</td>
-            </tr>
-            <tr>
-                <td>FAX</td>
-                <td class="right-align"></td>
-            </tr>
-            <tr>
-                <td>E-Mail</td>
-                <td class="right-align">koparker@wold-law.zzc</td>
-            </tr>
-        </table>
+    <!-- Section Header with updated styling -->
+    <div class="section-header">
+        Lease Information
     </div>
+
+    <!-- Single Column Layout -->
+    <div class="container">
+        <div class="row">
+            <span class="label">Name:</span>
+            <span class="value">Barristers II, LLC</span>
+        </div>
+        <div class="row">
+            <span class="label">DBA:</span>
+            <span class="value">3312nd_C</span>
+        </div>
+        <div class="row">
+            <span class="label">Property:</span>
+            <span class="value">331 2nd Ave Novel Coworking LLC</span>
+        </div>
+        <div class="row">
+            <span class="label">Location:</span>
+            <span class="value"></span>
+        </div>
+        <div class="row">
+            <span class="label">Customer:</span>
+            <span class="value"></span>
+        </div>
+        <div class="row">
+            <span class="label">Primary Contact:</span>
+            <span class="value">Karen Parker</span>
+        </div>
+        <div class="row">
+            <span class="label">Office Phone:</span>
+            <span class="value">(612) 341-2525</span>
+        </div>
+        <div class="row">
+            <span class="label">FAX:</span>
+            <span class="value"></span>
+        </div>
+        <div class="row">
+            <span class="label">E-Mail:</span>
+            <span class="value">koparker@wold-law.zzc</span>
+        </div>
+        <div class="row">
+            <span class="label">Status:</span>
+            <span class="value">Current</span>
+        </div>
+        <div class="row">
+            <span class="label">ICS Code:</span>
+            <span class="value">-</span>
+        </div>
+        <div class="row">
+            <span class="label">Lease Type:</span>
+            <span class="value">Office Net</span>
+        </div>
+        <div class="row">
+            <span class="label">Contract Area:</span>
+            <span class="value">4,490.00</span>
+        </div>
+        <div class="row">
+            <span class="label">Area:</span>
+            <span class="value">4,490.00</span>
+        </div>
+        <div class="row">
+            <span class="label">Monthly Rent:</span>
+            <span class="value">5,315.21</span>
+        </div>
+        <div class="row">
+            <span class="label">Annual Rent:</span>
+            <span class="value">63,782.52</span>
+        </div>
+        <div class="row">
+            <span class="label">Rent Per Area:</span>
+            <span class="value">1.18</span>
+        </div>
+        <div class="row">
+            <span class="label">Deposit:</span>
+            <span class="value">0.00</span>
+        </div>
+        <div class="row">
+            <span class="label">Lease Term:</span>
+            <span class="value">10/1/2018 to 2/29/2024</span>
+        </div>
+    </div>
+
 </body>
 </html>
