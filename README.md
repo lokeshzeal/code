@@ -1,108 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Lease Abstract</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lease Information Template</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
             padding: 20px;
-            background-color: #f9f9f9;
         }
-        h1 {
-            color: #333;
-            text-align: center;
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 10px;
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: auto;
         }
-        h2 {
-            color: #0056b3;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
         }
-        h3 {
-            color: #007bff;
+
+        .header, .footer {
+            background-color: #f4f4f4;
+            padding: 10px;
         }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-            margin: 10px 0;
-        }
-        li {
-            background: #fff;
-            margin: 5px 0;
+
+        td, th {
             padding: 10px;
             border: 1px solid #ddd;
-            border-radius: 5px;
         }
-        p {
-            background: #fff;
+
+        .section-title {
+            background-color: #e0e0e0;
             padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin: 5px 0;
+            font-weight: bold;
+        }
+
+        .lease-info th, .lease-info td {
+            width: 50%;
+            vertical-align: top;
+        }
+
+        .lease-info td {
+            text-align: right;
+        }
+
+        .right-align {
+            text-align: right;
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <table>
+            <!-- Lease Information -->
+            <tr class="section-title">
+                <th colspan="2">Lease Information</th>
+            </tr>
+            <tr>
+                <td>Status</td>
+                <td class="right-align">Current</td>
+            </tr>
+            <tr>
+                <td>ICS Code</td>
+                <td class="right-align">-</td>
+            </tr>
+            <tr>
+                <td>Lease Type</td>
+                <td class="right-align">Office Net</td>
+            </tr>
+            <tr>
+                <td>Contract Area</td>
+                <td class="right-align">4,490.00</td>
+            </tr>
+            <tr>
+                <td>Area</td>
+                <td class="right-align">4,490.00</td>
+            </tr>
+            <tr>
+                <td>Monthly Rent</td>
+                <td class="right-align">5,315.21</td>
+            </tr>
+            <tr>
+                <td>Annual Rent</td>
+                <td class="right-align">63,782.52</td>
+            </tr>
+            <tr>
+                <td>Rent Per Area</td>
+                <td class="right-align">1.18</td>
+            </tr>
+            <tr>
+                <td>Deposit</td>
+                <td class="right-align">0.00</td>
+            </tr>
+            <tr>
+                <td>Lease Term</td>
+                <td class="right-align">10/1/2018 To 2/29/2024</td>
+            </tr>
 
-    <h1>Lease Abstract</h1>
-
-    <h2>Lease Information</h2>
-    <ul>
-        <li><strong>Lease:</strong> {{ lease_name }}</li>
-        <li><strong>Lease Status:</strong> {{ lease_status }}</li>
-        <li><strong>Property:</strong> {{ property }}</li>
-        <li><strong>Location:</strong> {{ location }}</li>
-        <li><strong>Contract Area:</strong> {{ contract_area }}</li>
-        <li><strong>Monthly Rent:</strong> {{ monthly_rent }}</li>
-        <li><strong>Annual Rent:</strong> {{ annual_rent }}</li>
-        <li><strong>Rent Per Area:</strong> {{ rent_per_area }}</li>
-        <li><strong>Lease Term:</strong> {{ lease_term }}</li>
-    </ul>
-
-    <h2>Space</h2>
-    <ul>
-        <li><strong>Unit:</strong> {{ unit }}</li>
-        <li><strong>Building:</strong> {{ building }}</li>
-        <li><strong>Floor:</strong> {{ floor }}</li>
-        <li><strong>Area:</strong> {{ space_area }}</li>
-        <li><strong>Amendment Type:</strong> {{ amendment_type }}</li>
-    </ul>
-
-    <h2>Charge Schedules</h2>
-    {% for charge in charge_schedules %}
-        <h3>Charge Schedule {{ loop.index }}</h3>
-        <ul>
-            <li><strong>Charge Code:</strong> {{ charge.charge_code }}</li>
-            <li><strong>Charge Description:</strong> {{ charge.charge_desc }}</li>
-            <li><strong>Date From:</strong> {{ charge.date_from }}</li>
-            <li><strong>Date To:</strong> {{ charge.date_to }}</li>
-            <li><strong>Monthly Amount:</strong> {{ charge.monthly_amt }}</li>
-            <li><strong>Annual Amount:</strong> {{ charge.annual_amt }}</li>
-            <li><strong>Amount Per Area:</strong> {{ charge.amt_per_area }}</li>
-            <li><strong>Amendment Type:</strong> {{ charge.amendment_type }}</li>
-        </ul>
-    {% endfor %}
-
-    <h2>Amendments</h2>
-    {% for amendment in amendments %}
-        <h3>Amendment {{ loop.index }}</h3>
-        <ul>
-            <li><strong>Type:</strong> {{ amendment.type }}</li>
-            <li><strong>Description:</strong> {{ amendment.description }}</li>
-            <li><strong>Status:</strong> {{ amendment.status }}</li>
-            <li><strong>Term (Months):</strong> {{ amendment.term }}</li>
-            <li><strong>Date From:</strong> {{ amendment.date_from }}</li>
-            <li><strong>Date To:</strong> {{ amendment.date_to }}</li>
-        </ul>
-    {% endfor %}
-
-    <h2>Other Lease Provisions / Clauses</h2>
-    {% for clause in other_clauses %}
-        <h3>{{ clause.name }}</h3>
-        <p>{{ clause.description }}</p>
-    {% endfor %}
-
+            <!-- Customer Information -->
+            <tr class="section-title">
+                <th colspan="2">Customer Information</th>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td class="right-align">Barristers II, LLC</td>
+            </tr>
+            <tr>
+                <td>Property</td>
+                <td class="right-align">3312nd.C</td>
+            </tr>
+            <tr>
+                <td>Location</td>
+                <td class="right-align">331 2nd Ave S Novel Coworking LLC</td>
+            </tr>
+            <tr>
+                <td>Primary Contact</td>
+                <td class="right-align">Karen Parker</td>
+            </tr>
+            <tr>
+                <td>Office Phone</td>
+                <td class="right-align">(612) 341-2525 x</td>
+            </tr>
+            <tr>
+                <td>FAX</td>
+                <td class="right-align"></td>
+            </tr>
+            <tr>
+                <td>E-Mail</td>
+                <td class="right-align">koparker@wold-law.zzc</td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
