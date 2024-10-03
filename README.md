@@ -44,5 +44,34 @@
         </tr>
         <!-- Add more fields as needed -->
     </table>
+    <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>No.</th>
+      <th>Expense Type</th>
+      <th>Due Date</th>
+      <th>Rent From</th>
+      <th>Rent To</th>
+      <th>Amount</th>
+      <th>Frequency</th>
+      <th>Comments</th>
+    </tr>
+  </thead>
+  <tbody>
+    {%- for row in doc.rent_schedule_tab -%}
+    <tr>
+      <td>{{ loop.index }}</td>
+      <td>{{ row.expense_type }}</td>
+      <td>{{ row.due_date }}</td>
+      <td>{{ row.rent_from }}</td>
+      <td>{{ row.rent_to }}</td>
+      <td>{{ row.amount }}</td>
+      <td>{{ row.frequency }}</td>
+      <td>{{ row.comments }}</td>
+    </tr>
+    {%- endfor -%}
+  </tbody>
+</table>
+
 </body>
 </html>
